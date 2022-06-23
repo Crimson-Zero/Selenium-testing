@@ -1,0 +1,14 @@
+chrome_driver_path = "path"
+
+driver = webdriver.Chrome(executable_path=chrome_driver_path)
+
+driver.get("https://www.python.org")
+
+event_times = driver.find_elements_by_css_selector(".event-widget time")
+event_names = driver.find_elements_by_css_selector(".event-widget li a")
+
+event = {}
+for t in range(len(event_times)):
+    event[t]={
+        "time":event_times[t].text,
+        "name":event_names[t].text}
