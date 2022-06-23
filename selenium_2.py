@@ -1,6 +1,6 @@
 from selenium import webdriver
 
-chrome_driver_path = "C:/Development/chromedriver.exe"
+chrome_driver_path = "path"
 
 time_array = []
 event_array=[]
